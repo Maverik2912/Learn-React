@@ -1,0 +1,15 @@
+.mainTitle{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.mainContainer{
+    background-color: #272b34;
+    padding: 50px 150px;
+}
+.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}

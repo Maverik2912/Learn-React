@@ -1,0 +1,26 @@
+.character{
+    height: var(--characterContainerSize);
+    flex: 0 0 calc(50% - 25px);
+    display: flex;
+    border-radius: 20px;
+    color: white;
+    background-color: #3d3e43;
+}
+.character li:hover, .characterName:hover{
+    color: orange;
+}
+img{
+    border-radius: 20px 0 0 20px;
+    height: var(--characterContainerSize);
+}
+.dscrContainer{
+    padding: 15px;
+}
+.characterName{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+li {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
