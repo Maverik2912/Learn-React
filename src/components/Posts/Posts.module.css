@@ -1,0 +1,14 @@
+.postsWrapper{
+    width: 80%;
+    margin: 0 auto 30px;
+}
+.postsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.postsTitle{
+    text-align-last: center;
+    margin-block: 50px;
+}

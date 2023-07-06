@@ -1,0 +1,32 @@
+.postContainer{
+    flex: 0 0 calc(50% - 20px);
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.postTitle{
+    font-size: 16px;
+}
+.myBtn{
+   background-color: rgba(0, 128, 0, 0.67);
+   width: 80px;
+   padding: 10px 0;
+   border: none;
+   text-align: center;
+   text-transform: uppercase;
+   font-weight: 600;
+   color: white;
+   border-radius: 10px;
+   cursor: pointer;
+   box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.26);
+   transition: .5s;
+}
+
+.myBtn:hover{
+    background-color: rgba(152, 101, 4, 0.84);
+}
