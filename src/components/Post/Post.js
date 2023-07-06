@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Posts.module.css';
-const Post = ({id, title, clickHandler, closeDetailInfo, body, isActive}) => {
+const Post = ({post, clickHandler, closeDetailInfo, isActive}) => {
+    const {id, title, body, userId} = post;
 
     return (
         <>
@@ -12,7 +13,10 @@ const Post = ({id, title, clickHandler, closeDetailInfo, body, isActive}) => {
             :
             <div className={styles.postContainer}>
                 <h4 className={styles.postTitle}>{id}. {title}</h4>
-                <p><b>Post text:</b> {body}</p>
+                <ul className={styles.details}>
+                    <li><b>User id: </b>{userId}</li>
+                    <li><b>Post text:</b> {body}</li>
+                </ul>
                 <button className={styles.myBtn} onClick={() => closeDetailInfo()}>Hide</button>
             </div>
 

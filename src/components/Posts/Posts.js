@@ -27,12 +27,10 @@ const Posts = () => {
     const allPosts = posts.map(post => {
         return <Post
             key={post.id}
-            id={post.id}
-            title={post.title}
+            post={post}
             isActive={isActive}
             clickHandler={clickHandler}
             closeDetailInfo={closeDetailInfo}
-            body={post.body}
         />
     });
 
@@ -43,10 +41,10 @@ const Posts = () => {
             {
                 error ?
                     <ErrorComponent error={error.message}/> :
-                    <div className={styles.postsWrapper}>
+                    <>
                         <h1 className={styles.postsTitle}>Posts's List</h1>
                         <div className={styles.postsContainer}>{allPosts}</div>
-                    </div>
+                    </>
             }
         </>
     );
