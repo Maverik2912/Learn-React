@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {fetchLaunches} from "../requests/fetchLaunches";
+import {fetchLaunches} from "../../requests/fetchLaunches";
 import Launch from "../Launch/Launch";
 import ErrorComponent from "../ErrorComponent/ErrorComponent";
-import {generateRandomId} from "../utils/getRandomId";
+import {generateRandomId} from "../../utils/getRandomId";
 import styles from './Launches.module.css';
 
 const Launches = () => {

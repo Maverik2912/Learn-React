@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'
-import Launches from "./Launches/Launches";
+import Launches from "./components/Launches/Launches";
 const App = () => {
     return (
         <>
