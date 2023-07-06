@@ -1,10 +1,12 @@
 import React from 'react';
+import styles from './ErrorComponent.module.css';
 
-const ErrorComponent = () => {
+const ErrorComponent = ({error}) => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <h1 className={styles.errTitle}>Ooooupps... Something went wrong</h1>
+            <p className={styles.errText}>{error.message}</p>
+        </>
     );
 };
 

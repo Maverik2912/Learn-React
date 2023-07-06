@@ -1,9 +1,15 @@
 import React from 'react';
+import styles from './User.module.css';
 
-const User = () => {
+const User = ({user, showCurrentUserPosts}) => {
+    const {id, name, username} = user;
     return (
-        <div>
-            
+        <div className={styles.userContainer}>
+            <h3 className={styles.title}>{name} "{username}"</h3>
+            <button
+                onClick={() => showCurrentUserPosts(id, name)}
+                className={styles.myBtn}
+            >Show posts</button>
         </div>
     );
 };
