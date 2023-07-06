@@ -1,0 +1,15 @@
+.launchesContainer{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.mainTitle{
+    text-align: center;
+    margin: 50px 0;
+}
+
+.launches{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

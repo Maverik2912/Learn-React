@@ -1,0 +1,10 @@
+.launchContainer{
+    flex: 0 0 25%;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.launchContainer p {
+    margin: 8px 0;
+}
