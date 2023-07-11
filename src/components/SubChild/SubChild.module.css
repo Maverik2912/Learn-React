@@ -1,0 +1,6 @@
+.container{
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(0, 128, 0, 0.44);
+    border: 1px solid black;
+}
