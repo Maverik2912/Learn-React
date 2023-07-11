@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ErrorPage from "../ErrorPage/ErrorPage";
 import Posts from "../Posts/Posts";
 import styles from './User.module.css';
