@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styles from './SubChild.module.css';
-const SubChild1_1 = ({subtitle, author}) => {
-    const {name, surname} = author;
+import {AuthorContext} from "../../App";
+const SubChild1_1 = ({subtitle}) => {
+    const {name, surname} = useContext(AuthorContext);
+
     return (
         <div className={styles.container}>
             <h3>{subtitle}</h3>
