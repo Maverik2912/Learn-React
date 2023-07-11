@@ -1,5 +1,4 @@
 import React from 'react';
-import SubChild1_1 from "../SubChild/SubChild1_1";
 import styles from './Child.module.css';
 import SubChild2_2 from "../SubChild/SubChild2_2";
 import SubChild2_1 from "../SubChild/SubChild2_1";
