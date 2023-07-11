@@ -1,10 +1,20 @@
 import React, {useEffect, useState} from 'react';
 import User from "../User/User";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
-const UsersComponent = ({users}) => {
+const UsersComponent = () => {
+    const [users, setUsers] = useState(null);
     const [posts, setPosts] = useState(null);
     const [activeUser, setActiveUser] = useState(null);
     const [error, setError] = useState(null);
+
+
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(data => setUsers(data))
+            .catch(e => setError(e));
+    }, [])
 
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/users/${activeUser}/posts`)
@@ -23,7 +33,9 @@ const UsersComponent = ({users}) => {
     />)
     return (
         <div>
-            {allUsers}
+            {error ? <ErrorPage error={error.message} />
+                : allUsers
+            }
         </div>
     );
 };
