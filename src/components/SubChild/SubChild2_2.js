@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './SubChild.module.css';
-const SubChild2_2 = ({subtitle, author}) => {
-    const {name, surname} = author
+const SubChild2_2 = ({subtitle, setAuthor}) => {
+    const author = {
+        name: 'Mykyta', surname: 'Kraskovskyi'
+    }
 
+    useEffect(() => {
+        setAuthor(author)
+    }, []);
 
     return (
         <div className={styles.container}>
             <h3>{subtitle}</h3>
-            <p>Author: {name} {surname}</p>
+            <p>Author: {author.name} {author.surname}</p>
         </div>
     );
 };
