@@ -28,8 +28,8 @@ const UsersComponent = () => {
         user={user}
         posts={posts}
         error={error}
-        activeUser={activeUser}
-        setActiveUser={setActiveUser}
+        isActive={activeUser === user.id}
+        onShow={() => setActiveUser(activeUser === user.id ? null : user.id)}
     />)
     return (
         <div>
