@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Post from "./Post/Post";
 
-const Posts = ({userId}) => {
+const Posts = ({currentUser: {name, userId}}) => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -11,9 +11,12 @@ const Posts = ({userId}) => {
     }, [userId]);
 
     return (
-        <div>
-            {posts.map(post => <Post key={post.id} post={post} />)}
-        </div>
+        <>
+            <h1>{name}</h1>
+            <div>
+                {posts.map(post => <Post key={post.id} post={post}/>)}
+            </div>
+        </>
     );
 };
 

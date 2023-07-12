@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import User from "./User/User";
 
-const Users = ({setUserId, userId}) => {
+const Users = ({setCurrentUser, currentUser}) => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
@@ -15,8 +15,8 @@ const Users = ({setUserId, userId}) => {
             {users.map(user => <User
                 key={user.id}
                 user={user}
-                setUserId={setUserId}
-                isActive={userId === user.id}
+                currentUser={currentUser}
+                setCurrentUser={setCurrentUser}
                  />)}
         </div>
     );

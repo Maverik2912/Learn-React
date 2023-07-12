@@ -1,6 +1,6 @@
 import React from 'react';
 
-const User = ({user, setUserId, isActive}) => {
+const User = ({user, currentUser, setCurrentUser}) => {
     const {id, name, username} = user;
     return (
         <>
@@ -9,7 +9,7 @@ const User = ({user, setUserId, isActive}) => {
                 <li>Name: {name}</li>
                 <li>Username: {username}</li>
             </ul>
-            <button onClick={() => setUserId(id)}>{isActive ? 'Hide posts' : 'ShowPosts'}</button>
+            <button onClick={() => setCurrentUser({name, userId: id})}>{currentUser?.userId === user.id ? 'Hide posts' : 'ShowPosts'}</button>
         </>
 
     );

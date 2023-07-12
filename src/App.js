@@ -3,12 +3,13 @@ import Users from "./components/Users/Users";
 import Posts from "./components/Posts/Posts";
 
 const App = () => {
-    const [userId, setUserId] = useState(null);
+    const [currentUser, setCurrentUser] = useState(null);
+
 
     return (
         <>
-            <Users setUserId={setUserId} userId={userId} />
-            {userId && <Posts userId={userId} />}
+            <Users setCurrentUser={setCurrentUser} currentUser={currentUser} />
+            {currentUser && <Posts currentUser={currentUser} />}
         </>
     );
 };
