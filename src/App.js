@@ -1,12 +1,14 @@
-import React from 'react';
-import './App.css';
-import UsersComponent from "./components/UsersComponent/UsersComponent";
+import React, {useState} from 'react';
+import Users from "./components/Users/Users";
+import Posts from "./components/Posts/Posts";
 
 const App = () => {
+    const [userId, setUserId] = useState(null);
 
     return (
         <>
-           <UsersComponent />
+            <Users setUserId={setUserId} userId={userId} />
+            {userId && <Posts userId={userId} />}
         </>
     );
 };
