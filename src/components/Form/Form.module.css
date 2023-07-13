@@ -30,9 +30,9 @@
 }
 p {
     display: grid;
-    grid-template-columns:  1.5fr 2fr;
+    grid-template-columns:  1fr 2fr;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 label{
     color: #dedede;
