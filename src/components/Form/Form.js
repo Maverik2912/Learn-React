@@ -98,9 +98,9 @@ const Form = () => {
 
                 <p className={styles.buttons}>
                     <button type='button' className={styles.green} onClick={getCars}>Get cars</button>
-                    <button type='submit'>Post car</button>
-                    <button type='button' onClick={putCar} className={styles.blue}>Put car</button>
-                    <button type='button' onClick={deleteCar} className={styles.red}>Delete car</button>
+                    <button type='submit'>Post car (brand, price, year)</button>
+                    <button type='button' onClick={putCar} className={styles.blue}>Update car (by id)</button>
+                    <button type='button' onClick={deleteCar} className={styles.red}>Delete car (by id)</button>
                 </p>
             </form>
         </div>
