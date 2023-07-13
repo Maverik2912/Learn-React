@@ -47,6 +47,10 @@ input {
 input:focus{
     outline: none;
 }
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
 button{
     grid-column: span 2;
     width: 40%;
@@ -76,4 +80,18 @@ button:hover{
     100%{
         transform: scale(1);
     }
+}
+.red{
+    background-color: #c54949;
+}
+.blue{
+    background-color: #5959bb;
+}
+.green{
+    background-color: #459a45;
+}
+.info{
+    color: white;
+    grid-column: span 2;
+    text-align: center;
 }
