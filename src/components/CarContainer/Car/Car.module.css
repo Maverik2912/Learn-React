@@ -1,0 +1,11 @@
+.car{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px 10px;
+}
+.car p {
+    margin-bottom: 5px;
+}
+.button{
+    margin-right: 10px;
+}
