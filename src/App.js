@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
+import FormContainer from "./components/FormContainer/FormContainer";
 
 const App = () => {
     return (
-        <div>
-
-        </div>
+        <>
+            <FormContainer />
+        </>
     );
 };
 
