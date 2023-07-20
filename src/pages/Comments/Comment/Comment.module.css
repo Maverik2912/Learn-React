@@ -1,0 +1,12 @@
+.comment{
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+.comment p {
+    margin-bottom: 10px;
+}
+.comment:hover{
+    background-color: #d7d5d5;
+}

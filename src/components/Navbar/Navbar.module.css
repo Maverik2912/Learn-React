@@ -1,0 +1,19 @@
+.navbar{
+    height: 70px;
+    background-color: #644680;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.link{
+    text-decoration: none;
+    color: white;
+}
+.link:hover{
+    color: orange;
+}
+.link.active{
+    color: orange;
+}

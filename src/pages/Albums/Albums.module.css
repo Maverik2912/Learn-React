@@ -1,0 +1,15 @@
+.container{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-collapse: collapse;
+    gap: 10px;
+}
+.container > * {
+    border: 1px solid black;
+    padding: 10px;
+}
+.title{
+    text-align: center;
+    margin: 30px;
+}
