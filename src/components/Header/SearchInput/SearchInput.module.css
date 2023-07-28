@@ -1,16 +1,17 @@
 .mainContainer{
     display: flex;
     align-items: center;
+    width: 100%;
 }
 .inputContainer{
-    margin-left: 60px;
+    margin-left: 15px;
     display: flex;
     flex-direction: column;
     position: relative;
     width: 100%;
 }
 .input{
-    width: 400px;
+    width: 100%;
     padding: 7px 20px;
     font-size: 18px;
     border: 1px solid gray;
@@ -19,7 +20,7 @@
     outline: none;
 }
 .input::placeholder{
-    font-size: 16px;
+    font-size: 14px;
 }
 .searchList{
     position: absolute;
@@ -44,4 +45,12 @@
 }
 .light{
     background-color: #e5e5e5;
+}
+.seeAll{
+    display: block;
+    width: 100%;
+    background-color: gray;
+    text-align: center;
+    padding: 7px 15px;
+    cursor: pointer;
 }

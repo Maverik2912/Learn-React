@@ -5,7 +5,7 @@
 }
 body{
     background: url("../images/Avengers.jpg");
-    background-size: cover;
+    background-size: 100%;
     padding: 20px 0;
 }
 .container{

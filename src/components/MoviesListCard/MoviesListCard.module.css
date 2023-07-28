@@ -1,11 +1,11 @@
 .container{
     padding: 30px;
-
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
-.gridContainer{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.wrapper{
+    flex: 1 1 auto;
 }
 .container img {
     width: 90%;
@@ -13,10 +13,6 @@
 }
 .container img:hover{
     transform: scale(1.02);
-}
-.movieTitle{
-    color: #525252;
-    font-size: 20px;
 }
 .title{
     text-align: center;

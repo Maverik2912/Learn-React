@@ -12,3 +12,4 @@ export * from './MoviesListCard/MoviesListCard';
 export * from './MovieDetails/MovieDetails';
 export * from './Trailer/Trailer';
 export * from './MoviesPrinter/MoviesPrinter';
+export * from './MoviePagination/MoviePagination';

@@ -18,18 +18,19 @@ const Header = () => {
 
     return (
         <header className={isDark ? styles.dark : styles.light}>
-            <div className={styles.switchContainer}>
-                <div className={`${styles.switch} ${isDark ? styles.dark : styles.light}`}><Switch onChange={() => setIsDark(prev => !prev)} defaultChecked color="default"/></div>
-            </div>
-            <div className={styles.container}>
+            <div className={styles.gridContainer}>
+                <div className={styles.switchContainer}>
+                    <div className={`${styles.switch} ${isDark ? styles.dark : styles.light}`}><Switch onChange={() => setIsDark(prev => !prev)} defaultChecked color="default"/></div>
+                </div>
+
                 <SelectComponent
                     inputLabel='All genres'
                     options={genres} />
                 <SelectComponent
                     inputLabel='All times'
                     options={options} />
+                <SearchInput />
             </div>
-                    <SearchInput />
         </header>
     );
 };

@@ -12,7 +12,9 @@ const MainLayout = () => {
     return (
         <MovieAppContext.Provider value={{selectedValue, setSelectedValue, isDark, setIsDark}}>
             <div className={`${styles.container} ${isDark ? styles.dark : styles.light}`}>
-                <SideBar />
+                <div>
+                    <SideBar />
+                </div>
                 <div>
                     <Header />
                     <Outlet context={{setSelectedValue, selectedValue}} />

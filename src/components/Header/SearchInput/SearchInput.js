@@ -1,9 +1,11 @@
 import {useContext, useEffect, useRef, useState} from "react";
+import {Link} from "react-router-dom";
 
 import {moviesService} from "../../../services/moviesService";
 import {FoundedMovie} from "../FoundedMovie/FoundedMovie";
 import {MovieAppContext} from "../../../layouts/MainLayout";
 import styles from "./SearchInput.module.css";
+import {links} from "../../../constants/links/links";
 
 const SearchInput = () => {
     const {selectedValue, setSelectedValue, isDark} = useContext(MovieAppContext);
@@ -14,7 +16,7 @@ const SearchInput = () => {
 
     const inputRef = useRef();
     const searchListRef = useRef();
-
+    
     window.addEventListener('click', (e) => {
         if (e.target === inputRef.current || e.target === searchListRef.current) {
             return;
@@ -24,7 +26,7 @@ const SearchInput = () => {
 
     useEffect(() => {
         if (query) {
-            moviesService.getByQuery(query)
+            moviesService.getByQuery(query, 1)
                 .then(({data}) => {
                     const movies = data.results;
                     const sortedMovies = movies.sort((a, b) => b.popularity - a.popularity);
@@ -51,6 +53,9 @@ const SearchInput = () => {
                                 movie => <FoundedMovie key={movie.id} movie={movie} selectedValue={selectedValue}
                                                        setSelectedValue={setSelectedValue}/>)
                             : <li className={styles.noMovies}>No movies were found for your search</li>
+                        }
+                        {fullMovieList.length !== shortMoviesList.length &&
+                            <Link className={styles.seeAll} to={`${links.QUERY}/${query}`}>See all</Link>
                         }
                     </ul>
                 }

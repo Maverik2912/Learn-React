@@ -3,7 +3,7 @@ import {MainLayout} from "../layouts/MainLayout";
 import {
     ErrorPage,
     MovieInfoPage,
-    MovieInfoPageLoader,
+    MovieInfoPageLoader, MoviesByQueryPage, MoviesByQueryPageLoader,
     MoviesListCardPage, MoviesListCardPageLoader,
     MoviesListPage,
     MoviesListPageLoader, MoviesListTimePage, MoviesListTimePageLoader
@@ -38,6 +38,11 @@ export const router = createBrowserRouter([
                 path: `${links.TIME}/:year`,
                 element: <MoviesListTimePage />,
                 loader: MoviesListTimePageLoader
+            },
+            {
+                path: `${links.QUERY}/:query`,
+                element: <MoviesByQueryPage />,
+                loader: MoviesByQueryPageLoader
             }
         ]
     }
