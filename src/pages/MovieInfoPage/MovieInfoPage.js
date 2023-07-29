@@ -12,11 +12,15 @@ const MovieInfoPage = () => {
 };
 
 export const MovieInfoPageLoader = async ({params}) => {
-    const {movieId} = params;
-    const similarMovies = await moviesService.getSimilarById(movieId);
-    const movie = await moviesService.getById(movieId);
-    const video = await moviesService.getVideoById(movieId);
-    return {movie, similarMovies, video};
+    try{
+        const {movieId} = params;
+        const similarMovies = await moviesService.getSimilarById(movieId);
+        const movie = await moviesService.getById(movieId);
+        const video = await moviesService.getVideoById(movieId);
+        return {movie, similarMovies, video};
+    } catch(e) {
+        console.log(e.message);
+    }
 }
 
 export {MovieInfoPage};

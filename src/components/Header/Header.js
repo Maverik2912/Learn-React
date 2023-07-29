@@ -7,6 +7,7 @@ import {options} from "../../constants/options/options";
 import styles from './Header.module.css';
 import {SearchInput} from "./SearchInput/SearchInput";
 import {MovieAppContext} from "../../layouts/MainLayout";
+import {links} from "../../constants/links/links";
 
 const Header = () => {
     const {setIsDark, isDark} = useContext(MovieAppContext);

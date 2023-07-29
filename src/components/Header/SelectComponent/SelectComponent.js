@@ -1,5 +1,4 @@
 import {useContext, useEffect, useRef, useState} from "react";
-import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 
 import {moviesService} from "../../../services/moviesService";
@@ -7,16 +6,19 @@ import {links} from "../../../constants/links/links";
 import {MovieAppContext} from "../../../layouts/MainLayout";
 import './SelectComponent.css';
 
-const SelectComponent = ({inputLabel, options}) => {
-    const {selectedValue, setSelectedValue, isDark} = useContext(MovieAppContext);
+const SelectComponent = ({inputLabel, options, linkPrefix}) => {
+    const {setSelectedValue, isDark} = useContext(MovieAppContext);
 
+    const [selectedValue, setSelectedValueLocal] = useState("");
     const [genresList, setGenresList] = useState([]);
     const [genreName, setGenreName] = useState(null);
     const navigate = useNavigate();
 
+    const labelRef = useRef();
+
     useEffect(() => {
         moviesService.getGenres().then(({data}) => setGenresList(data.genres));
-    }, [])
+    }, []);
 
     useEffect(() => {
        if(selectedValue) {
@@ -34,21 +36,21 @@ const SelectComponent = ({inputLabel, options}) => {
     }, [selectedValue, genreName]);
 
     return (
-        <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-            <InputLabel className={isDark ? 'dark' : 'light'} id="demo-select-small-label">{inputLabel}</InputLabel>
-            <Select
-                labelId="demo-select-small-label"
-                id="demo-select-small"
+        <div className="custom-select">
+            <label htmlFor="select-choice1" className="label select-1"><span className="selection-choice">{inputLabel}</span>
+            </label>
+            <select
+                id="select-choice1"
+                className="select"
                 value={selectedValue}
                 onChange={e => setSelectedValue(e.target.value)}
-                label={inputLabel}
             >
-                {options.map(option => <MenuItem
+                {options.map(option => <option
                     key={option.name}
                     value={option.id}>{option.name}
-                </MenuItem>)}
-            </Select>
-        </FormControl>
+                </option>)}
+            </select>
+        </div>
 
     );
 };

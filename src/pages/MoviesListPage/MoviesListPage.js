@@ -10,11 +10,16 @@ const MoviesListPage = () => {
 };
 
 const MoviesListPageLoader = async () => {
-    const trendingMovies = await moviesService.getMovies();
-    const topRatedMovies = await moviesService.getBestRating();
+    try {
+        const trendingMovies = await moviesService.getMovies();
+        const topRatedMovies = await moviesService.getBestRating();
 
-    return {
-        trendingMovies, topRatedMovies
+        return {
+            trendingMovies,
+            topRatedMovies
+        };
+    } catch (error) {
+        console.log(error.message);
     }
 }
 

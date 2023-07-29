@@ -10,9 +10,13 @@ const MoviesListTimePage = () => {
 };
 
 const MoviesListTimePageLoader = async ({params}) => {
-    const {year} = params;
-    const movies = await moviesService.getByTimeInterval(year, (+year + 9).toString(), 1);
-    return {year, movies}
+    try{
+        const {year} = params;
+        const movies = await moviesService.getByTimeInterval(year, (+year + 9).toString(), 1);
+        return {year, movies}
+    } catch(e) {
+        console.log(e.message);
+    }
 }
 
 export {MoviesListTimePage, MoviesListTimePageLoader};

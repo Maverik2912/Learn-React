@@ -1,7 +1,61 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600);
+body {
+    background: #1c5570;
+    color: #ffffff;
+    font: 400 .9em/1.9 'Open Sans', Calibri, Helvetica, Arial, sans-serif;
+}
 
-#demo-select-small-label{
-    font-weight: 700;
+.custom-select {
+    position: relative;
+    width: 100%;
+    max-width: 25em;
+    margin: 0 auto;
+    cursor: pointer;
 }
-#demo-select-small-label.dark{
-    color: #c5c3c3;
+
+.select,
+.label {
+    display: block;
 }
+
+.select {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 1em;
+    height: 3em;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    background: none transparent;
+    border: 0 none;
+}
+
+.label {
+    position: relative;
+    padding: 1em;
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+.label::after {
+    content: "▼";
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1em;
+    border-left: 1px solid;
+}
+
+.open .label::after {
+    content: "▲";
+}
+
+.select-1 {
+    background: #21cf8f;
+    border-bottom: 0.25em solid #1aa371;
+}
+.select-1:after {
+    border-color: #1aa371;
+}
+
