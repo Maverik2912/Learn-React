@@ -23,3 +23,12 @@ body{
 .light{
     background-color: #d2d2d2;
 }
+.dark .hide{
+    height: 100%;
+    background-color: #000036;
+}
+
+.light .hide{
+    height: 100%;
+    background-color: #d2d2d2;
+}

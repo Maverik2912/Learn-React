@@ -16,6 +16,7 @@ const MainLayout = () => {
             <div className={`${styles.container} ${isDark ? styles.dark : styles.light}`}>
                 <div>
                     <SideBar />
+                    <div className={styles.hide}></div>
                 </div>
                 <div>
                     <Header />

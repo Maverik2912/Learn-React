@@ -4,7 +4,7 @@ import {PosterPreview} from "../PosterPreview/PosterPreview";
 import styles from './Carousel.module.css';
 import {MovieAppContext} from "../../layouts/MainLayout";
 
-const Carousel = ({movies, title}) => {
+const Carousel = ({movies, title, translateX}) => {
     const {isDark} = useContext(MovieAppContext);
 
     const [sliderIndex, setSliderIndex] = useState(0);
@@ -28,7 +28,7 @@ const Carousel = ({movies, title}) => {
                     <button onClick={handleNext}
                             className={`${styles.handle} ${styles.rightHandle}`}><div className={styles.text}>&#8250;</div></button>
                 </div>
-                <div className={styles.slider} style={{ transform: `translateX(calc(${sliderIndex} * -100%)` }}>
+                <div className={styles.slider} style={{ transform: `translateX(calc(${sliderIndex} * -${translateX})` }}>
                     {movies.map(movie => <PosterPreview key={movie.id} movie={movie} />)}
                 </div>
             </div>

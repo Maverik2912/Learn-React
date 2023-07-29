@@ -11,9 +11,9 @@ const MoviesList = () => {
 
     return (
         <div className={styles.container}>
-            <Carousel movies={upcomingMovies} title='Upcoming' />
-            <Carousel movies={trendingMovies} title='Trending Now' />
-            <Carousel movies={topRatedMovies} title='Top Rated All Time' />
+            <Carousel movies={upcomingMovies} title='Upcoming' translateX='100%' />
+            <Carousel movies={trendingMovies} title='Trending Now' translateX='100%' />
+            <Carousel movies={topRatedMovies} title='Top Rated All Time' translateX='100%' />
         </div>
     );
 };

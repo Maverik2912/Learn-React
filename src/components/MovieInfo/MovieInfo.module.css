@@ -18,6 +18,7 @@
 }
 .similar{
     margin-top: 50px;
+    overflow: hidden;
 }
 .similar h2{
     font-size: 24px;
