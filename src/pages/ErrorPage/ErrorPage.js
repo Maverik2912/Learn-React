@@ -1,15 +1,23 @@
-import {useRouteError} from "react-router-dom";
-
-import styles from './ErrorPage.module.css';
+import {Outlet, useRouteError} from "react-router-dom";
+import {Header, SideBar} from "../../components";
 
 const ErrorPage = () => {
     const error = useRouteError();
 
     return (
-        <div className={styles.container}>
-            <h1>{error.status} {error.statusText}</h1>
-        </div>
+        <>
+            <SideBar />
+            <Header />
+            <Outlet />
+        </>
     );
 };
 
 export {ErrorPage};
+
+
+
+
+
+
+

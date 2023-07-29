@@ -34,7 +34,11 @@ const SelectComponent = ({inputLabel, options}) => {
     }, [selectedValue, genreName]);
 
     return (
-        <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+        <FormControl
+            sx={{ m: 1, minWidth: 120 }}
+            size="small"
+            className={`custom-form-control ${isDark ? "dark" : "light"}`}
+        >
             <InputLabel className={isDark ? 'dark' : 'light'} id="demo-select-small-label">{inputLabel}</InputLabel>
             <Select
                 labelId="demo-select-small-label"

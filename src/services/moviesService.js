@@ -13,5 +13,6 @@ export const moviesService = {
     getByTimeInterval: (from, to, page) => apiMoviesService.get(urls.moviesList, {params: {'primary_release_date.gte': from, 'primary_release_date.lte': to, sort_by: 'popularity.desc', page}}),
     rateMovie: (id, body) => apiMoviesService.post(`${urls.movieById}/${id}/rating`, JSON.stringify(body), {headers: {
             'Content-Type': 'application/json;charset=utf-8'
-        }})
+        }}),
+    getUpcoming: () => apiMoviesService.get(urls.upcoming)
 }

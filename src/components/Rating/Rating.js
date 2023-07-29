@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, {useContext, useState} from 'react';
+
 import './Rating.css';
 import {moviesService} from "../../services/moviesService";
+import {MovieAppContext} from "../../layouts/MainLayout";
 
 const Rating = ({ rating: initialRating = null, movieId, isVote, setIsVote}) => {
     const [rating, setRating] = useState(initialRating);
     const [tempRating, setTempRating] = useState(null);
+    const {isDark} = useContext(MovieAppContext);
     const rate = (selectedRating) => {
         if(isVote) {
             return;

@@ -1,13 +1,15 @@
-import {Outlet} from "react-router-dom";
+import {Outlet, useNavigation} from "react-router-dom";
 import {createContext, useState} from "react";
 
-import {Header, SideBar} from "../components";
+import {Header, Preloader, SideBar} from "../components";
 import styles from './MainLayout.module.css';
 
 export const MovieAppContext = createContext(null);
 const MainLayout = () => {
     const [selectedValue, setSelectedValue] = useState('');
     const [isDark, setIsDark] = useState(true);
+
+    const navigation = useNavigation();
 
     return (
         <MovieAppContext.Provider value={{selectedValue, setSelectedValue, isDark, setIsDark}}>
@@ -17,7 +19,9 @@ const MainLayout = () => {
                 </div>
                 <div>
                     <Header />
-                    <Outlet context={{setSelectedValue, selectedValue}} />
+                    {navigation.state === 'loading' ? <Preloader /> :
+                        <Outlet context={{setSelectedValue, selectedValue}} />
+                    }
                 </div>
             </div>
         </MovieAppContext.Provider>
@@ -25,3 +29,16 @@ const MainLayout = () => {
 };
 
 export {MainLayout};
+
+
+
+
+
+
+
+
+
+
+
+
+
