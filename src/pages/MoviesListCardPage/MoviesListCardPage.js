@@ -14,7 +14,7 @@ export const MoviesListCardPageLoader = async ({params}) => {
         const {genreName, genreId} = params;
         const movies = await moviesService.getByGenreId(genreId, 1);
         return {movies, genreName, genreId}
-    } catch(e) {
+    } catch (e) {
         console.log(e.message);
     }
 }
