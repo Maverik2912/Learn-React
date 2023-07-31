@@ -31,18 +31,22 @@ const MovieDetails = ({movie}) => {
                         <h3>Tagline:</h3>
                         <p>{movie.tagline}</p>
                     </>}
-                    <h3>Genre:</h3>
-                    {movie.genres.length &&
-                        <div>
-                            {movie.genres.map((genre, index) => {
-                                return (
-                                    <Link className={`${styles.genre} ${isDark ? styles.dark : styles.light}`} key={genre.name} to={`${links.GENRES}/${genre.name}/${genre.id}`}>
-                                        {genre.name}
-                                        {index !== movie.genres.length - 1 && ','}
-                                    </Link>
-                                );
-                            })}
-                        </div>
+                    {movie.genres.length ?
+                        <>
+                            <h3>Genre:</h3>
+                            <div>
+                                {movie.genres.map((genre, index) => {
+                                    return (
+                                        <Link className={`${styles.genre} ${isDark ? styles.dark : styles.light}`}
+                                              key={genre.name} to={`${links.GENRES}/${genre.name}/${genre.id}`}>
+                                            {genre.name}
+                                            {index !== movie.genres.length - 1 && ','}
+                                        </Link>
+                                    );
+                                })}
+                            </div>
+                        </> :
+                        <></>
                     }
                     {movie.runtime !== null && movie.runtime !== undefined && <>
                         <h3>Runtime:</h3>

@@ -24,7 +24,6 @@ const MovieInfo = () => {
         }
     }, [isVote]);
 
-
     return (
         <>
             <div className={styles.mainContainer}>
@@ -47,9 +46,12 @@ const MovieInfo = () => {
                     </div>
                 </div>
             </div>
-            <div className={styles.similar}>
-                <Carousel movies={similarMovies} title='Similar movies' translateX='88%'/>
-            </div>
+            {similarMovies.length ?
+                <div className={styles.similar}>
+                    <Carousel movies={similarMovies} title='Similar movies' translateX='88%'/>
+                </div>
+                : <></>
+            }
         </>
     );
 };
