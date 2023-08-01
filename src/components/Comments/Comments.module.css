@@ -1,0 +1,14 @@
+.comments{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+.comments > div {
+    border: 1px solid gray;
+    padding: 10px;
+}
+.title{
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0;
+}
