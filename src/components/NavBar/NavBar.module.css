@@ -1,0 +1,16 @@
+.navbar{
+    height: 70px;
+    background-color: #593f72;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    text-transform: uppercase;
+}
+.navbar > * {
+    color: white;
+    text-decoration: none;
+}
+.navbar > *:hover{
+    color: yellow;
+}
