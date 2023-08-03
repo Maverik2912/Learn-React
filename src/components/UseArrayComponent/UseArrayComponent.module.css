@@ -1,0 +1,23 @@
+.input{
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.button{
+    padding: 8px 15px;
+    background-color: green;
+    color: white;
+    margin-right: 5px;
+    border: none;
+}
+.container{
+    border: 1px solid black;
+    padding: 10px;
+}
+.container p {
+    font-size: 20px;
+}
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
