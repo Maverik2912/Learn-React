@@ -1,0 +1,9 @@
+.cars{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+.cars > * {
+    border: 1px solid black;
+    padding: 25px;
+}

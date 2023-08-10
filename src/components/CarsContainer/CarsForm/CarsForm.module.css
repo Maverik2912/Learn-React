@@ -1,0 +1,47 @@
+.form{
+    border: 1px solid black;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+.inputs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.inputs > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.form label{
+    font-weight: 700;
+}
+
+.form input{
+    padding: 8px 10px;
+}
+
+.form button{
+    width: 200px;
+    display: block;
+    margin: 40px auto 0;
+    padding: 10px 0;
+    background-color: rgba(0, 128, 0, 0.27);
+    border: 2px solid green;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.form button:hover{
+    background-color: rgba(0, 128, 0, 0.47);
+}
+
+.form span{
+    color: red;
+    font-weight: 700;
+}

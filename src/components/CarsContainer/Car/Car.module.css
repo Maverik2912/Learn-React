@@ -1,0 +1,13 @@
+.button{
+    background-color: rgba(0, 128, 0, 0.18);
+    border: 1px solid green;
+    margin: 10px 0 10px 5px;
+    padding: 5px 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: rgba(0, 128, 0, 0.38);
+}
+
