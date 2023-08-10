@@ -44,6 +44,7 @@ const CarsForm = () => {
     }
 
     const updateCar = (data) => {
+        data = {...data, id: carForUpdate.id}
         dispatch(carsThunks.put(carForUpdate.id, data)).then(() => reset())
     }
 
