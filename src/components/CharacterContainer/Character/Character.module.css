@@ -1,0 +1,20 @@
+.character{
+    padding: 20px 50px;
+    background-color: rgba(33, 33, 33, 0.74);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dscr{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 25px;
+
+}
+
+.dscr > *:hover{
+    color: rgba(255, 165, 0, 0.91);
+}
